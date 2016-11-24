@@ -24,7 +24,6 @@
 *.exe
 *.out
 # Output assets
-!testfiles/*.out
 *.app
 *.i*86
 *.x86_64
@@ -33,3 +32,13 @@
 # Debug files
 *.dSYM/
 *.su
+
+# Target binaries
+dijkstra_omp
+dijkstra_seq2
+
+# Documentation (for now)
+doc/
+
+# Test output
+tests/*.cmp
