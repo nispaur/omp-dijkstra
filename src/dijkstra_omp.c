@@ -100,6 +100,8 @@ double dijkstra(){
     // find the nearest node
     shortest_dist = INF;
     nearest_node = -1;
+    
+    #pragma omp parallel for 
     for (int i = 0; i < num_nodes; i++){
         if ( !tree[i] && min_distance[i] < shortest_dist ){
         shortest_dist = min_distance[i];
@@ -113,6 +115,7 @@ double dijkstra(){
     }
 
     tree[nearest_node] = 1;
+    #pragma omp parallel for 
     for (int i = 0; i < num_nodes; i++)
       if ( !tree[i] ){
         int d = get_distance(nearest_node,i);
