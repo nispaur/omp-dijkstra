@@ -4,7 +4,7 @@ SHELL = /bin/bash
 
 RM := rm -f
 
-CFLAGS := -std=c99 -g -Wall -pedantic -fopenmp
+CFLAGS := -std=c99 -g3 -O3 -Wall -pedantic -fopenmp
 
 objdir := obj
 srcdir := src
